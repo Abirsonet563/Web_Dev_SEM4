@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        input[type='text']:focus:valid{background:#D2F587; }
+        input[type='number']:in-range{border-color:green;}
+    </style>
+</head>
+<body>
+	
+<div style="padding:250px; margin-left:150px;">
+	<table style="border: 1px solid black; padding:20px;">
+  
+		<form>
+            <tr>
+                <td>
+                    <cente><h2>Registation</h2></cente>
+                </td>
+            </tr>
+			<tr>
+				<td>
+					<label for="username">
+						Username: 
+					</label>
+				</td>
+				<td><input type="text" id="username" required="required"/>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="Password">
+                    Password:
+					</label>
+				</td>
+				<td><input type="Password" id="Password" required="required" pattern="[0-9]{}"/>
+				</td>
+			</tr>
+            <tr>
+				<td><label for="rePassword">
+                    Retype-Password: 
+					</label>
+				</td>
+				<td><input type="Password" id="rePassword" required="required"/>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="email">
+                    Email:
+					</label>
+				</td>
+				<td><input type="email" id="email" required="required"/>
+				</td>
+            </tr>
+            <tr>
+                <td><label for="DOB">
+                    DOB:
+                    </label>
+                 </td>
+                 <td><input type="date" id="date"></td>
+            </tr>
+			<tr>
+				<td><label for="cno">
+						Creadit Card:
+					</label>
+				</td>
+				<td><input type="number" id="cno" />
+				</td>
+			</tr>
+            <tr>
+				<td><label for="pno">
+						Post Code:
+					</label>
+				</td>
+				<td><input type="number" id="pno"required="required" pattern="[0-9]{4}"/>
+				</td>
+			</tr>
+            <tr style="margin-left: 50px;">
+                <td></td>
+                <td><button type="submit">Submit</button>
+                <button type="reset">Reset</button></td>
+            </tr>
+		</form>
+    
+	</table>
+</div>
+<script>
+    function checkEmail() {
+        var email_input1 = document.getElementById("Password");
+        var email_input2 = document.getElementById("rePassword");
+        if (email_input1.value != email_input2.value) {
+        email_input2.setCustomValidity("Password not matched.");
+        }
+        else {
+        // input is valid -- reset the error message
+        input.setCustomValidity('');
+        }
+        }
+</script>
+</body>
+
+</html>
